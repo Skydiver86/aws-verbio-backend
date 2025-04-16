@@ -20,10 +20,21 @@ jobs:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         run: heroku container:login
 
+      - name: Set Heroku Config Vars
+        run: |
+          heroku config:set \
+            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
+            AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
+            AWS_REGION=eu-central-1 \
+            AWS_S3_BUCKET_NAME=${{ secrets.AWS_S3_BUCKET_NAME }} \
+            DATABASE_URL=${{ secrets.DATABASE_URL }} \
+            --app ${{ secrets.HEROKU_APP_NAME }}
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
       - name: Build and Deploy Docker Container for Backend
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
           heroku container:push web --app ${{ secrets.HEROKU_APP_NAME }}
           heroku container:release web --app ${{ secrets.HEROKU_APP_NAME }}
