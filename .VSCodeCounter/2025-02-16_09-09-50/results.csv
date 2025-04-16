@@ -1,0 +1,7 @@
+"filename", "language", "JSON", "JavaScript", "Docker", "YAML", "comment", "blank", "total"
+"/Users/sascha/Entwicklung/01_Projekte/Verbio/Lagerhaltung/backend/.github/workflows/deploy.yml", "YAML", 0, 0, 0, 24, 0, 5, 29
+"/Users/sascha/Entwicklung/01_Projekte/Verbio/Lagerhaltung/backend/Dockerfile", "Docker", 0, 0, 7, 0, 7, 7, 21
+"/Users/sascha/Entwicklung/01_Projekte/Verbio/Lagerhaltung/backend/package-lock.json", "JSON", 929, 0, 0, 0, 0, 1, 930
+"/Users/sascha/Entwicklung/01_Projekte/Verbio/Lagerhaltung/backend/package.json", "JSON", 19, 0, 0, 0, 0, 1, 20
+"/Users/sascha/Entwicklung/01_Projekte/Verbio/Lagerhaltung/backend/server.js", "JavaScript", 0, 443, 0, 0, 51, 92, 586
+"Total", "-", 948, 443, 7, 24, 58, 106, 1586
